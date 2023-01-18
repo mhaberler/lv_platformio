@@ -1,11 +1,10 @@
 #include "lvgl.h"
 #include "app_hal.h"
 
-#include "../../ui/ui.h"
-#include "../../ui/ui_custom.h"
+#include "../../asok-esp/lib/ui/ui.h"
+#include "../../asok-esp/lib/ui/ui_custom.h"
 
-int main(void)
-{
+int main(void) {
   lv_init();
   hal_setup();
   ui_init();
