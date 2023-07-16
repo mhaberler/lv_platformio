@@ -11,9 +11,8 @@
 #include "app_hal.h"
 #include "lvgl.h"
 
-#ifdef INCLUDE_UI_H
-// #include "../../flowsensor/src/ui/ui.h"
-#include "ui.h"
+#ifdef INCLUDE_1
+#include INCLUDE_1
 #endif
 
 #include "demos/lv_demos.h"
