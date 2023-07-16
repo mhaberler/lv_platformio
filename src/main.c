@@ -14,29 +14,20 @@
 #ifdef INCLUDE_1
 #include INCLUDE_1
 #endif
-
-#include "demos/lv_demos.h"
-
-// #ifdef INIT_FUNCTION
-// void INIT_FUNCTION(void);
-// #endif
+#ifdef INCLUDE_2
+#include INCLUDE_2
+#endif
 
 int main(void) {
   lv_init();
 
   hal_setup();
 
-#ifdef INIT_FUNCTION
-  INIT_FUNCTION();
+#ifdef INIT_FUNCTION_1
+  INIT_FUNCTION_1();
 #endif
-
-#if LV_USE_DEMO_WIDGETS
-  lv_demo_widgets();
+#ifdef INIT_FUNCTION_2
+  INIT_FUNCTION_2();
 #endif
-
-#if LV_USE_DEMO_KEYPAD_AND_ENCODER
-  lv_demo_keypad_encoder();
-#endif
-
   hal_loop();
 }
